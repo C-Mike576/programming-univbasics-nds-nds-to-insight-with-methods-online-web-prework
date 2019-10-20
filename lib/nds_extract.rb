@@ -28,10 +28,10 @@ def gross_for_director(director_data)
   result = {}
   movie_gross = 0
   movie_index = 0
-  while movie_index < nds[director_data][:movies].length do
-      movie_gross += nds[director_data][:movies][movie_index][:worldwide_gross]
+  while movie_index < director_data[:movies].length do
+      movie_gross += director_data[:movies][movie_index][:worldwide_gross]
       movie_index += 1
     end
-    result[nds[director_data][:name]] = movie_gross
+    result[director_data[:name]] = movie_gross
     pp result
 end
